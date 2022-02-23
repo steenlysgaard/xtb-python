@@ -7,7 +7,7 @@ jobs:
   linux-intel-oneapi:
     runs-on: ubuntu-latest
     env:
-      CC: icx
+      CC: icc
       CXX: icpx
       FC: ifort
 
