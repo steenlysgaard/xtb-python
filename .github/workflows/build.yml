@@ -46,7 +46,7 @@ jobs:
         pip3 install -r requirements.txt
 
     - name: Setup build of extension module
-      run: meson setup build --prefix=$PWD -Dla_backend=mkl
+      run: meson setup build --prefix=$PWD -Dla_backend=mkl -Dfortran_link_args=-qopenmp
 
     - name: Compile extension module
       run: ninja -C build install
